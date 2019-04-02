@@ -19,7 +19,7 @@ module Zoom
           Utils.require_params(%i[access_token from to], options)
           # TODO handle date format for `from` and `to` params
           # TODO implement `next_page_token`, will be returned whenever the set of available chat history list exceeds 100. The expiration period is 30 minutes.
-          Utils.parse_response self.class.post('/chat/list', query: options, headers: request_header)
+          Utils.parse_response self.class.post('/chat/list', query: options, headers: request_headers)
         end
       end
     end
